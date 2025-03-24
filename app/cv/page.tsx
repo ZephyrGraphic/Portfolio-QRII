@@ -1,9 +1,9 @@
-"use client"
+"use client";
 
-import { motion } from "framer-motion"
-import Link from "next/link"
-import Image from "next/image"
-import { useState } from "react"
+import { motion } from "framer-motion";
+import Link from "next/link";
+import Image from "next/image";
+import { useState } from "react";
 import {
   ArrowLeft,
   Mail,
@@ -15,30 +15,30 @@ import {
   GraduationCap,
   Award,
   Languages,
-} from "lucide-react"
-import { Button } from "@/components/ui/button"
-import { useLanguage } from "@/contexts/language-context"
-import AnimatedBackground from "@/components/animated-background"
-import CVGenerator from "@/components/cv-generator"
+} from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { useLanguage } from "@/contexts/language-context";
+import AnimatedBackground from "@/components/animated-background";
+import CVGenerator from "@/components/cv-generator";
 
 export default function CVPage() {
-  const { t, language, setLanguage } = useLanguage()
-  const [animateContent, setAnimateContent] = useState(true)
+  const { t, language, setLanguage } = useLanguage();
+  const [animateContent, setAnimateContent] = useState(true);
 
   const handleLanguageChange = (lang: "en" | "id") => {
     if (lang !== language) {
-      setAnimateContent(false)
+      setAnimateContent(false);
       setTimeout(() => {
-        setLanguage(lang)
-        setAnimateContent(true)
-      }, 300)
+        setLanguage(lang);
+        setAnimateContent(true);
+      }, 300);
     }
-  }
+  };
 
   const educationData = [
     {
       id: 1,
-      period: "2020 - 2024",
+      period: "2024",
       degree: t("education.bachelor"),
       institution: "S-1 Pend.B.Inggris",
       description: t("education.bachelorDesc"),
@@ -64,7 +64,7 @@ export default function CVPage() {
       institution: "SDN KESAMBEN 02",
       description: t("education.elementaryDesc"),
     },
-  ]
+  ];
 
   const experienceData = [
     {
@@ -103,12 +103,17 @@ export default function CVPage() {
         t("experience.retail.responsibility3"),
       ],
     },
-  ]
+  ];
 
   const skillsData = [
     {
       category: t("cv.skills.teaching"),
-      skills: ["Curriculum Development", "Classroom Management", "Student Assessment", "Lesson Planning"],
+      skills: [
+        "Curriculum Development",
+        "Classroom Management",
+        "Student Assessment",
+        "Lesson Planning",
+      ],
     },
     {
       category: t("cv.skills.languages"),
@@ -116,13 +121,24 @@ export default function CVPage() {
     },
     {
       category: t("cv.skills.technical"),
-      skills: ["Microsoft Office", "Google Workspace", "Basic Web Design", "Social Media Management"],
+      skills: [
+        "Microsoft Office",
+        "Google Workspace",
+        "Basic Web Design",
+        "Social Media Management",
+      ],
     },
     {
       category: t("cv.skills.soft"),
-      skills: ["Communication", "Leadership", "Time Management", "Adaptability", "Problem Solving"],
+      skills: [
+        "Communication",
+        "Leadership",
+        "Time Management",
+        "Adaptability",
+        "Problem Solving",
+      ],
     },
-  ]
+  ];
 
   return (
     <div className="min-h-screen bg-black text-white pt-24 pb-16 px-4 md:px-10 relative">
@@ -188,12 +204,16 @@ export default function CVPage() {
                 Qodimatur Rofiah Immamatu Imroiah
               </h1>
 
-              <p className="text-xl text-zinc-300 mb-4">{t("about.statusValue")}</p>
+              <p className="text-xl text-zinc-300 mb-4">
+                {t("about.statusValue")}
+              </p>
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-2 mt-4">
                 <div className="flex items-center">
                   <Mail className="w-4 h-4 mr-2 text-pink-500" />
-                  <span className="text-zinc-300">qodimaturrofiah@gmail.com</span>
+                  <span className="text-zinc-300">
+                    qodimaturrofiah@gmail.com
+                  </span>
                 </div>
 
                 <div className="flex items-center">
@@ -208,7 +228,9 @@ export default function CVPage() {
 
                 <div className="flex items-center">
                   <Calendar className="w-4 h-4 mr-2 text-pink-500" />
-                  <span className="text-zinc-300">{t("about.birthDateValue")}</span>
+                  <span className="text-zinc-300">
+                    {t("about.birthDateValue")}
+                  </span>
                 </div>
               </div>
             </div>
@@ -235,7 +257,10 @@ export default function CVPage() {
 
             <div className="space-y-6">
               {experienceData.map((item) => (
-                <div key={item.id} className="grid grid-cols-1 md:grid-cols-4 gap-4">
+                <div
+                  key={item.id}
+                  className="grid grid-cols-1 md:grid-cols-4 gap-4"
+                >
                   <div className="md:col-span-1">
                     <p className="text-pink-500 font-medium">{item.period}</p>
                   </div>
@@ -267,7 +292,10 @@ export default function CVPage() {
 
             <div className="space-y-6">
               {educationData.map((item) => (
-                <div key={item.id} className="grid grid-cols-1 md:grid-cols-4 gap-4">
+                <div
+                  key={item.id}
+                  className="grid grid-cols-1 md:grid-cols-4 gap-4"
+                >
                   <div className="md:col-span-1">
                     <p className="text-pink-500 font-medium">{item.period}</p>
                   </div>
@@ -292,11 +320,16 @@ export default function CVPage() {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {skillsData.map((category, index) => (
                 <div key={index} className="bg-zinc-800/30 rounded-lg p-4">
-                  <h3 className="text-lg font-semibold mb-3 text-pink-500">{category.category}</h3>
+                  <h3 className="text-lg font-semibold mb-3 text-pink-500">
+                    {category.category}
+                  </h3>
 
                   <div className="flex flex-wrap gap-2">
                     {category.skills.map((skill, skillIndex) => (
-                      <span key={skillIndex} className="bg-zinc-800 px-3 py-1 rounded-full text-sm">
+                      <span
+                        key={skillIndex}
+                        className="bg-zinc-800 px-3 py-1 rounded-full text-sm"
+                      >
                         {skill}
                       </span>
                     ))}
@@ -352,6 +385,5 @@ export default function CVPage() {
         </motion.div>
       </div>
     </div>
-  )
+  );
 }
-

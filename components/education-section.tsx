@@ -10,7 +10,7 @@ export default function EducationSection() {
   const educationData = [
     {
       id: 1,
-      period: "2020 - 2024",
+      period: "2024",
       degree: t("education.bachelor"),
       institution: "S-1 Pend.B.Inggris",
       year: "2024",

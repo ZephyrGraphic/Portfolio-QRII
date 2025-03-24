@@ -1,18 +1,18 @@
-"use client"
+"use client";
 
-import { motion } from "framer-motion"
-import Link from "next/link"
-import { ArrowRight, GraduationCap } from "lucide-react"
-import { Button } from "@/components/ui/button"
-import { useLanguage } from "@/contexts/language-context"
+import { motion } from "framer-motion";
+import Link from "next/link";
+import { ArrowRight, GraduationCap } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { useLanguage } from "@/contexts/language-context";
 
 export default function EducationPreview() {
-  const { t } = useLanguage()
+  const { t } = useLanguage();
 
   const educationData = [
     {
       id: 1,
-      period: "2020 - 2024",
+      period: "2024",
       degree: t("education.bachelor"),
       institution: "S-1 Pend.B.Inggris",
       year: "2024",
@@ -24,7 +24,7 @@ export default function EducationPreview() {
       institution: "MA AL ITTIHAD",
       year: "2022",
     },
-  ]
+  ];
 
   return (
     <div className="container mx-auto">
@@ -54,7 +54,9 @@ export default function EducationPreview() {
                   <GraduationCap className="w-5 h-5 text-pink-500" />
                 </div>
                 <div>
-                  <span className="text-sm text-pink-500 font-medium">{item.period}</span>
+                  <span className="text-sm text-pink-500 font-medium">
+                    {item.period}
+                  </span>
                   <h3 className="text-xl font-bold">{item.degree}</h3>
                   <p className="text-zinc-400">{item.institution}</p>
                 </div>
@@ -75,6 +77,5 @@ export default function EducationPreview() {
         </div>
       </motion.div>
     </div>
-  )
+  );
 }
-

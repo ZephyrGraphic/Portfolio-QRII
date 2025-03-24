@@ -1,19 +1,19 @@
-"use client"
+"use client";
 
-import { motion } from "framer-motion"
-import Link from "next/link"
-import { ArrowLeft, GraduationCap } from "lucide-react"
-import { Button } from "@/components/ui/button"
-import { useLanguage } from "@/contexts/language-context"
-import AnimatedBackground from "@/components/animated-background"
+import { motion } from "framer-motion";
+import Link from "next/link";
+import { ArrowLeft, GraduationCap } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { useLanguage } from "@/contexts/language-context";
+import AnimatedBackground from "@/components/animated-background";
 
 export default function EducationPage() {
-  const { t } = useLanguage()
+  const { t } = useLanguage();
 
   const educationData = [
     {
       id: 1,
-      period: "2020 - 2024",
+      period: "2024",
       degree: t("education.bachelor"),
       institution: "S-1 Pend.B.Inggris",
       year: "2024",
@@ -31,7 +31,10 @@ export default function EducationPage() {
       institution: "MA AL ITTIHAD",
       year: "2022",
       description: t("education.highSchoolDesc"),
-      achievements: [t("education.highSchool.achievement1"), t("education.highSchool.achievement2")],
+      achievements: [
+        t("education.highSchool.achievement1"),
+        t("education.highSchool.achievement2"),
+      ],
     },
     {
       id: 3,
@@ -51,7 +54,7 @@ export default function EducationPage() {
       description: t("education.elementaryDesc"),
       achievements: [t("education.elementary.achievement1")],
     },
-  ]
+  ];
 
   return (
     <div className="min-h-screen bg-black text-white pt-24 pb-16 px-4 md:px-10 relative">
@@ -98,7 +101,9 @@ export default function EducationPage() {
                   <div className="w-16 h-16 rounded-full bg-pink-500/20 flex items-center justify-center mb-4">
                     <GraduationCap className="w-8 h-8 text-pink-500" />
                   </div>
-                  <span className="text-pink-500 font-medium">{item.period}</span>
+                  <span className="text-pink-500 font-medium">
+                    {item.period}
+                  </span>
                   <div className="mt-2 inline-block px-3 py-1 rounded-full bg-zinc-800 text-xs font-medium">
                     {item.year}
                   </div>
@@ -106,13 +111,17 @@ export default function EducationPage() {
 
                 <div className="md:w-3/4">
                   <h2 className="text-2xl font-bold mb-2">{item.degree}</h2>
-                  <h3 className="text-xl text-zinc-400 mb-4">{item.institution}</h3>
+                  <h3 className="text-xl text-zinc-400 mb-4">
+                    {item.institution}
+                  </h3>
 
                   <p className="text-zinc-300 mb-4">{item.description}</p>
 
                   {item.achievements && item.achievements.length > 0 && (
                     <div>
-                      <h4 className="font-semibold mb-2">{t("education.achievements")}</h4>
+                      <h4 className="font-semibold mb-2">
+                        {t("education.achievements")}
+                      </h4>
                       <ul className="list-disc pl-5 space-y-1 text-zinc-300">
                         {item.achievements.map((achievement, i) => (
                           <li key={i}>{achievement}</li>
@@ -127,6 +136,5 @@ export default function EducationPage() {
         </div>
       </div>
     </div>
-  )
+  );
 }
-
