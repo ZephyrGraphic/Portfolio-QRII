@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion"
 import Link from "next/link"
-import { ArrowRight, FileText } from "lucide-react"
+import { ArrowRight, FileText, ImageIcon } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { useLanguage } from "@/contexts/language-context"
 import CVGenerator from "@/components/cv-generator"
@@ -32,7 +32,7 @@ export default function CVPreview() {
 
           <p className="text-zinc-300 mb-8 max-w-xl mx-auto">{t("cv.description")}</p>
 
-          <div className="flex flex-col sm:flex-row justify-center gap-4">
+          <div className="flex flex-col sm:flex-row justify-center gap-4 mb-6">
             <CVGenerator />
 
             <Button asChild variant="outline" className="rounded-full border-zinc-700 hover:bg-zinc-800">
@@ -40,6 +40,27 @@ export default function CVPreview() {
                 {t("cv.viewOnline")} <ArrowRight className="ml-2 h-4 w-4" />
               </Link>
             </Button>
+          </div>
+
+          <div className="flex flex-col items-center gap-4 mt-6">
+            <div className="flex justify-center gap-4">
+              <div className="flex items-center">
+                <FileText className="w-4 h-4 mr-2 text-pink-500" />
+                <span className="text-zinc-400 text-sm">PDF</span>
+              </div>
+              <div className="flex items-center">
+                <ImageIcon className="w-4 h-4 mr-2 text-pink-500" />
+                <span className="text-zinc-400 text-sm">PNG</span>
+              </div>
+              <div className="flex items-center">
+                <ImageIcon className="w-4 h-4 mr-2 text-pink-500" />
+                <span className="text-zinc-400 text-sm">JPG</span>
+              </div>
+            </div>
+            <p className="text-zinc-500 text-xs max-w-md">
+              PDF format supports multi-page content for longer CVs. Image formats (PNG/JPG) will automatically adjust
+              to fit all content in a single image.
+            </p>
           </div>
         </div>
       </motion.div>

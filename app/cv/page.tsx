@@ -160,7 +160,7 @@ export default function CVPage() {
               </button>
             </div>
 
-            <CVGenerator />
+            <CVGenerator variant="buttons" />
           </div>
         </div>
 
