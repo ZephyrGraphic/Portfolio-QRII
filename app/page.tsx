@@ -14,6 +14,8 @@ import SkillsPreview from "@/components/skills-preview"
 import StatsSection from "@/components/stats-section"
 import SummaryPreview from "@/components/summary-preview"
 import ContactPreview from "@/components/contact-preview"
+import CVPreview from "@/components/cv-preview"
+import AnimatedBackground from "@/components/animated-background"
 
 export default function Portfolio() {
   const { t } = useLanguage()
@@ -27,7 +29,8 @@ export default function Portfolio() {
   const scale = useTransform(scrollYProgress, [0, 0.2], [1, 0.9])
 
   return (
-    <div ref={ref} className="min-h-screen bg-black text-white">
+    <div ref={ref} className="min-h-screen bg-black text-white relative">
+      <AnimatedBackground />
       <Navbar />
 
       <main className="relative">
@@ -68,15 +71,19 @@ export default function Portfolio() {
           <SkillsPreview />
         </section>
 
-        <section id="stats" className="py-20 px-4 md:px-10">
+        <section id="cv" className="min-h-screen py-20 px-4 md:px-10">
+          <CVPreview />
+        </section>
+
+        <section id="stats" className="py-20 px-4 md:px-10 bg-zinc-950">
           <StatsSection />
         </section>
 
-        <section id="summary" className="py-20 px-4 md:px-10 bg-zinc-950">
+        <section id="summary" className="py-20 px-4 md:px-10">
           <SummaryPreview />
         </section>
 
-        <section id="contact" className="py-20 px-4 md:px-10">
+        <section id="contact" className="py-20 px-4 md:px-10 bg-zinc-950">
           <ContactPreview />
         </section>
       </main>

@@ -57,6 +57,10 @@ const translations: Translations = {
     en: "Contact",
     id: "Kontak",
   },
+  "nav.cv": {
+    en: "CV",
+    id: "CV",
+  },
 
   // Hero Section
   "hero.subtitle": {
@@ -492,6 +496,64 @@ const translations: Translations = {
   "contact.sendMessage": {
     en: "Send Message",
     id: "Kirim Pesan",
+  },
+
+  // CV Section
+  "cv.title": {
+    en: "Curriculum Vitae",
+    id: "Daftar Riwayat Hidup",
+  },
+  "cv.downloadTitle": {
+    en: "Download My CV",
+    id: "Unduh CV Saya",
+  },
+  "cv.description": {
+    en: "Get a comprehensive overview of my education, experience, and skills. You can download my CV in PDF format or view it online.",
+    id: "Dapatkan gambaran komprehensif tentang pendidikan, pengalaman, dan keterampilan saya. Anda dapat mengunduh CV saya dalam format PDF atau melihatnya secara online.",
+  },
+  "cv.download": {
+    en: "Download CV",
+    id: "Unduh CV",
+  },
+  "cv.viewOnline": {
+    en: "View Online",
+    id: "Lihat Online",
+  },
+  "cv.professionalSummary": {
+    en: "Professional Summary",
+    id: "Ringkasan Profesional",
+  },
+  "cv.workExperience": {
+    en: "Work Experience",
+    id: "Pengalaman Kerja",
+  },
+  "cv.education": {
+    en: "Education",
+    id: "Pendidikan",
+  },
+  "cv.skills.title": {
+    en: "Skills",
+    id: "Keahlian",
+  },
+  "cv.skills.teaching": {
+    en: "Teaching Skills",
+    id: "Keahlian Mengajar",
+  },
+  "cv.skills.languages": {
+    en: "Language Skills",
+    id: "Keahlian Bahasa",
+  },
+  "cv.skills.technical": {
+    en: "Technical Skills",
+    id: "Keahlian Teknis",
+  },
+  "cv.skills.soft": {
+    en: "Soft Skills",
+    id: "Keahlian Lunak",
+  },
+  "cv.languages": {
+    en: "Languages",
+    id: "Bahasa",
   },
 
   // Footer

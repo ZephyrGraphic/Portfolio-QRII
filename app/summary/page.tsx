@@ -6,12 +6,15 @@ import Image from "next/image"
 import { ArrowLeft, Star } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { useLanguage } from "@/contexts/language-context"
+import AnimatedBackground from "@/components/animated-background"
 
 export default function SummaryPage() {
   const { t } = useLanguage()
 
   return (
-    <div className="min-h-screen bg-black text-white pt-24 pb-16 px-4 md:px-10">
+    <div className="min-h-screen bg-black text-white pt-24 pb-16 px-4 md:px-10 relative">
+      <AnimatedBackground variant="subtle" />
+
       <div className="container mx-auto max-w-4xl">
         <div className="mb-12">
           <Button variant="ghost" asChild className="mb-6">

@@ -10,26 +10,7 @@ export default function HeroSection() {
 
   return (
     <div className="h-full flex flex-col justify-center items-center px-4 md:px-10 text-center relative overflow-hidden">
-      {/* Background gradient */}
-      <div className="absolute inset-0 bg-gradient-radial from-purple-900/20 to-transparent" />
-
-      {/* Animated circles */}
-      <motion.div
-        className="absolute w-96 h-96 rounded-full bg-gradient-to-r from-pink-500/20 to-purple-500/20 blur-3xl"
-        animate={{
-          x: [0, 100, 0],
-          y: [0, -50, 0],
-        }}
-        transition={{ duration: 15, repeat: Number.POSITIVE_INFINITY, repeatType: "reverse" }}
-      />
-      <motion.div
-        className="absolute w-64 h-64 rounded-full bg-gradient-to-r from-indigo-500/20 to-blue-500/20 blur-3xl"
-        animate={{
-          x: [0, -80, 0],
-          y: [0, 80, 0],
-        }}
-        transition={{ duration: 18, repeat: Number.POSITIVE_INFINITY, repeatType: "reverse" }}
-      />
+      {/* Animated circles are now handled by AnimatedBackground component */}
 
       <motion.div
         initial={{ opacity: 0, scale: 0.9 }}
