@@ -15,7 +15,7 @@ export default function EducationPage() {
       id: 1,
       period: "2024",
       degree: t("education.bachelor"),
-      institution: "S-1 Pend.B.Inggris",
+      institution: "Universitas PGRI Kanjuruhan Malang",
       year: "2024",
       description: t("education.bachelorDesc"),
       achievements: [

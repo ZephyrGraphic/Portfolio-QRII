@@ -1,18 +1,18 @@
-"use client"
+"use client";
 
-import { motion } from "framer-motion"
-import { GraduationCap } from "lucide-react"
-import { useLanguage } from "@/contexts/language-context"
+import { motion } from "framer-motion";
+import { GraduationCap } from "lucide-react";
+import { useLanguage } from "@/contexts/language-context";
 
 export default function EducationSection() {
-  const { t } = useLanguage()
+  const { t } = useLanguage();
 
   const educationData = [
     {
       id: 1,
       period: "2024",
       degree: t("education.bachelor"),
-      institution: "S-1 Pend.B.Inggris",
+      institution: "Universitas PGRI Kanjuruhan Malang",
       year: "2024",
     },
     {
@@ -36,7 +36,7 @@ export default function EducationSection() {
       institution: "SDN KESAMBEN 02",
       year: "2016",
     },
-  ]
+  ];
 
   return (
     <div className="container mx-auto">
@@ -64,7 +64,9 @@ export default function EducationSection() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, amount: 0.3 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
-                className={`relative flex flex-col md:flex-row ${index % 2 === 0 ? "md:flex-row-reverse" : ""}`}
+                className={`relative flex flex-col md:flex-row ${
+                  index % 2 === 0 ? "md:flex-row-reverse" : ""
+                }`}
               >
                 {/* Timeline dot */}
                 <div className="absolute left-0 md:left-1/2 transform -translate-x-1/2 w-10 h-10 rounded-full bg-zinc-900 border-4 border-pink-500 flex items-center justify-center z-10">
@@ -72,9 +74,15 @@ export default function EducationSection() {
                 </div>
 
                 {/* Content */}
-                <div className={`ml-12 md:ml-0 md:w-1/2 ${index % 2 === 0 ? "md:pr-12" : "md:pl-12"}`}>
+                <div
+                  className={`ml-12 md:ml-0 md:w-1/2 ${
+                    index % 2 === 0 ? "md:pr-12" : "md:pl-12"
+                  }`}
+                >
                   <div className="bg-zinc-900/50 backdrop-blur-sm rounded-xl p-6 border border-zinc-800 hover:border-pink-500/50 transition-colors">
-                    <span className="text-sm text-pink-500 font-medium">{item.period}</span>
+                    <span className="text-sm text-pink-500 font-medium">
+                      {item.period}
+                    </span>
                     <h3 className="text-xl font-bold mt-1">{item.degree}</h3>
                     <p className="text-zinc-400 mt-2">{item.institution}</p>
                     <div className="mt-4 inline-block px-3 py-1 rounded-full bg-zinc-800 text-xs font-medium">
@@ -88,6 +96,5 @@ export default function EducationSection() {
         </div>
       </motion.div>
     </div>
-  )
+  );
 }
-

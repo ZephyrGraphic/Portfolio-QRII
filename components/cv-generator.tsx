@@ -294,7 +294,7 @@ export default function CVGenerator({
             language === "en"
               ? "Bachelor's Degree in English Education"
               : "Sarjana Pendidikan Bahasa Inggris",
-          institution: "S-1 Pend.B.Inggris",
+          institution: "Universitas PGRI Kanjuruhan Malang",
         },
         {
           period: "2019 - 2022",
@@ -833,7 +833,7 @@ function CVImageTemplate() {
       id: 1,
       period: "2024",
       degree: t("education.bachelor"),
-      institution: "S-1 Pend.B.Inggris",
+      institution: "Universitas PGRI Kanjuruhan Malang",
     },
     {
       id: 2,
