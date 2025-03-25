@@ -82,7 +82,7 @@ export default function CVGenerator({
 
       // Try to embed the profile image with circular styling
       try {
-        const response = await fetch("/images/rofi-rounded.jpg");
+        const response = await fetch("/images/rofi-rounded.png");
         if (!response.ok)
           throw new Error(`Failed to fetch image: ${response.status}`);
 

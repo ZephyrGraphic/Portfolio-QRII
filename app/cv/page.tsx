@@ -196,7 +196,7 @@ export default function CVPage() {
           <div className="flex flex-col md:flex-row gap-6 mb-10 pb-10 border-b border-zinc-800">
             <div className="md:w-1/4 flex justify-center">
               <Image
-                src="/images/rofi-rounded.jpg"
+                src="/images/rofi-rounded.png"
                 alt="Qodimatur Rofiah"
                 width={150}
                 height={150}
