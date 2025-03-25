@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion"
 import Link from "next/link"
-import { ArrowRight, FileText, ImageIcon } from "lucide-react"
+import { ArrowRight, FileText } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { useLanguage } from "@/contexts/language-context"
 import CVGenerator from "@/components/cv-generator"
@@ -48,18 +48,10 @@ export default function CVPreview() {
                 <FileText className="w-4 h-4 mr-2 text-pink-500" />
                 <span className="text-zinc-400 text-sm">PDF</span>
               </div>
-              <div className="flex items-center">
-                <ImageIcon className="w-4 h-4 mr-2 text-pink-500" />
-                <span className="text-zinc-400 text-sm">PNG</span>
-              </div>
-              <div className="flex items-center">
-                <ImageIcon className="w-4 h-4 mr-2 text-pink-500" />
-                <span className="text-zinc-400 text-sm">JPG</span>
-              </div>
             </div>
             <p className="text-zinc-500 text-xs max-w-md">
-              PDF format supports multi-page content for longer CVs. Image formats (PNG/JPG) will automatically adjust
-              to fit all content in a single image.
+              Our PDF format supports multi-page content for comprehensive CVs, with professional layout and high print
+              quality.
             </p>
           </div>
         </div>

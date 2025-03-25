@@ -13,9 +13,9 @@ export default function EducationPage() {
   const educationData = [
     {
       id: 1,
-      period: "2024",
+      period: "2024 - Present",
       degree: t("education.bachelor"),
-      institution: "Universitas PGRI Kanjuruhan Malang",
+      institution: "PGRI Kanjuruhan Malang University",
       year: "2024",
       description: t("education.bachelorDesc"),
       achievements: [

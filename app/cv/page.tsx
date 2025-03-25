@@ -38,9 +38,14 @@ export default function CVPage() {
   const educationData = [
     {
       id: 1,
-      period: "2024",
+      period: "2024 - Present",
       degree: t("education.bachelor"),
-      institution: "Universitas PGRI Kanjuruhan Malang",
+      institution: "PGRI Kanjuruhan Malang University",
+      faculty:
+        language === "en"
+          ? "Faculty of Language and Literature (S1 Pendidikan Bahasa Inggris)"
+          : "Fakultas Bahasa dan Sastra (S1 Pendidikan Bahasa Inggris)",
+      status: language === "en" ? "Currently enrolled" : "Sedang berjalan",
       description: t("education.bachelorDesc"),
     },
     {
@@ -176,7 +181,7 @@ export default function CVPage() {
               </button>
             </div>
 
-            <CVGenerator variant="buttons" />
+            <CVGenerator variant="button" />
           </div>
         </div>
 
@@ -191,7 +196,7 @@ export default function CVPage() {
           <div className="flex flex-col md:flex-row gap-6 mb-10 pb-10 border-b border-zinc-800">
             <div className="md:w-1/4 flex justify-center">
               <Image
-                src="/images/rofi.jpg"
+                src="/images/rofi-rounded.jpg"
                 alt="Qodimatur Rofiah"
                 width={150}
                 height={150}
@@ -303,6 +308,16 @@ export default function CVPage() {
                   <div className="md:col-span-3">
                     <h3 className="text-xl font-bold">{item.degree}</h3>
                     <p className="text-zinc-400 mb-2">{item.institution}</p>
+                    {item.faculty && (
+                      <p className="text-zinc-400 mb-2 italic">
+                        {item.faculty}
+                      </p>
+                    )}
+                    {item.status && (
+                      <p className="text-pink-500 mb-2 text-sm font-medium">
+                        {item.status}
+                      </p>
+                    )}
                     <p className="text-zinc-300">{item.description}</p>
                   </div>
                 </div>
